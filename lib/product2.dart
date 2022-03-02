@@ -30,21 +30,78 @@ class PCPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)),
                   height: 75,
                 ),
-                Text('Name : HP 205 G4 NonTouch All-in-One-PC'),
-                Text("Price: $PC"),
-                Text("Installment : $PC_Installment"),
-                Text("Interest : " +
-                    Installment(double.parse(PC_Installment)).toString() +
-                    "%"),
-                Text("Installment : " +
-                    Installment2(double.parse(PC), double.parse(PC_Installment))
+                Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text('Name : HP All-in-One 22-df1023d PC'),
+                  ),),
+
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price:"),
+                    subtitle: Text(' $PC'),
+                  ),
+                  ),
+
+                   Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : "),
+                    subtitle: Text('$PC_Installment'),
+                  ),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Interest"),
+                    subtitle: Text(' ' + 
+                        Installment(double.parse(PC_Installment))
+                        .toString() + "%"),),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : "),
+                    subtitle: Text(' ' +
+                    Installment2(
+                            double.parse(PC),
+                            double.parse(PC_Installment))
                         .toString()),
-                Text("All Interest : " +
-                    Installment3(double.parse(PC), double.parse(PC_Installment))
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("All Interest: "),
+                    subtitle: Text(' ' +
+                    Installment3(
+                            double.parse(PC),
+                            double.parse(PC_Installment))
                         .toString()),
-                Text("Price including interest : " +
-                    numberAdd(double.parse(PC), double.parse(PC_Installment))
-                        .toString())
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price include interest : "),
+                    subtitle: Text(' ' +
+                    numberAdd(
+                            double.parse(PC),
+                            double.parse(PC_Installment))
+                        .toString()),
+                    ),
+                  ),
+                  
               ],
             ),
           ),

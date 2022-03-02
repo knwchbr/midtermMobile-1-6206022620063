@@ -31,27 +31,84 @@ class NotebookPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30)),
                   height: 75,
                 ),
-                Text('Name : Notebook DELL Latitude 3520-SNS3520003'),
-                Text("Price: $Notebook"),
-                Text("Installment : $Notebook_Installment"),
-                Text("Interest : " +
-                            Installment(double.parse(Notebook_Installment))
-                        .toString() + "%"),
-                Text("Installment : " +
+                
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text('Name : Notebook DELL Latitude 3520-SNS3520003'),
+                  ),),
+
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price:"),
+                    subtitle: Text(' $Notebook'),
+                  ),
+                  ),
+
+                   Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : $Notebook_Installment"),
+                    subtitle: Text('$Notebook_Installment'),
+                  ),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Interest"),
+                    subtitle: Text(' ' + 
+                        Installment(double.parse(Notebook_Installment))
+                        .toString() + "%"),),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : "),
+                    subtitle: Text(' ' +
                     Installment2(
                             double.parse(Notebook),
                             double.parse(Notebook_Installment))
                         .toString()),
-                Text("All Interest : " +
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("All Interest: "),
+                    subtitle: Text(' ' +
                     Installment3(
                             double.parse(Notebook),
                             double.parse(Notebook_Installment))
                         .toString()),
-                Text("Price including Interest : " +
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price include interest : "),
+                    subtitle: Text(' ' +
                     numberAdd(
                             double.parse(Notebook),
                             double.parse(Notebook_Installment))
-                        .toString())
+                        .toString()),
+                    ),
+                  ),
+                  
+                 
+
+                  
+                
+                  
               ],
             ),
           ),

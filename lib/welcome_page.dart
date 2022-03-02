@@ -59,7 +59,62 @@ class WelcomePage extends StatelessWidget {
                     .toString()),),
                   ),
 
-                
+                   Row(
+                      SizedBox(height: 8),
+                      Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: TextField(
+                        controller: _PC,
+                         decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Enter PC Price'),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "6",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 6')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "10",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 10')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "24",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 24'))
+                  ],
+                )
+
+               
+
               ],
             ),
           ),
@@ -73,4 +128,7 @@ class WelcomePage extends StatelessWidget {
     return total;
   }
 }
+
+           
+
 

@@ -30,24 +30,78 @@ class TabletPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)),
                   height: 75,
                 ),
-                Text('Name : Samsung Galaxy Tab S7'),
-                Text("Price: $Tablet"),
-                Text("Installment : $Tablet_Installment"),
-                Text("Interest : " +
-                    Installment(double.parse(Tablet_Installment)).toString() +
-                    "%"),
-                Text("Installment : " +
-                    Installment2(double.parse(Tablet),
+                Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text('Samsung Glaxzy Tab S7'),
+                  ),),
+
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price:"),
+                    subtitle: Text(' $Tablet'),
+                  ),
+                  ),
+
+                   Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : $Tablet_Installment"),
+                    subtitle: Text('$Tablet_Installment'),
+                  ),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Interest"),
+                    subtitle: Text(' ' + 
+                        Installment(double.parse(Tablet_Installment))
+                        .toString() + "%"),),
+                  ),
+                  
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Installment : "),
+                    subtitle: Text(' ' +
+                    Installment2(
+                            double.parse(Tablet),
                             double.parse(Tablet_Installment))
                         .toString()),
-                Text("All Insterest : " +
-                    Installment3(double.parse(Tablet),
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("All Interest: "),
+                    subtitle: Text(' ' +
+                    Installment3(
+                            double.parse(Tablet),
                             double.parse(Tablet_Installment))
                         .toString()),
-                Text("Price including interest : " +
-                    numberAdd(double.parse(Tablet),
+                    ),
+                  ),
+                  Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(10),
+                  child: ListTile(
+                    title: Text("Price include interest : "),
+                    subtitle: Text(' ' +
+                    numberAdd(
+                            double.parse(Tablet),
                             double.parse(Tablet_Installment))
-                        .toString())
+                        .toString()),
+                    ),
+                  ),
+                  
               ],
             ),
           ),

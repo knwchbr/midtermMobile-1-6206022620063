@@ -46,10 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: const Padding(
           padding: EdgeInsets.all(10),
           child: ClipOval(
-            child: Image(image: AssetImage('images/fitm.png')),
+            child: Image(image: AssetImage('images/fitm.png'),width: 800,height: 900, fit: BoxFit.cover,),
           ),
         ),
-        title: Text('Myshop'),
+        title: Text('MyShop'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10),
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           image: AssetImage('assets/images/NoteBook.jpg')),
                       color: Colors.lightGreen.shade200,
                       borderRadius: BorderRadius.circular(15)),
-                  height: 75,
+                  height: 200,
                   child: Row(children: [
                     Text(
                       'Notebook',
@@ -87,7 +87,50 @@ class _MyHomePageState extends State<MyHomePage> {
                     keyboardType: TextInputType.number,
                   ),
                 ),
-                
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NotebookPage(
+                                Notebook: _Notebook.text,
+                                Notebook_Installment: "6",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 6')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NotebookPage(
+                                Notebook: _Notebook.text,
+                                Notebook_Installment: "10",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 10')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NotebookPage(
+                                Notebook: _Notebook.text,
+                                Notebook_Installment: "24",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 24'))
+                  ],
+                ),
+              ],
+            ),
             Column(
               children: [
                 Container(
@@ -97,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           image: AssetImage('assets/images/Tablet.jpg')),
                       color: Colors.lightGreen.shade200,
                       borderRadius: BorderRadius.circular(15)),
-                  height: 75,
+                  height: 200,
                   child: Row(children: [
                     Text(
                       'Tablet',
@@ -119,7 +162,50 @@ class _MyHomePageState extends State<MyHomePage> {
                     keyboardType: TextInputType.number,
                   ),
                 ),
-              
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => TabletPage(
+                                Tablet: _Tablet.text,
+                                Tablet_Installment: "6",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 6')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => TabletPage(
+                                Tablet: _Tablet.text,
+                                Tablet_Installment: "10",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 10')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => TabletPage(
+                                Tablet: _Tablet.text,
+                                Tablet_Installment: "24",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 24')),
+                  ],
+                )
+              ],
+            ),
             Column(
               children: [
                 Container(
@@ -129,13 +215,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           image: AssetImage('assets/images/PC.jpg')),
                       color: Colors.lightGreen.shade200,
                       borderRadius: BorderRadius.circular(15)),
-                  height: 75,
+                  height: 200,
                   child: Row(children: [
                     Text(
                       'PC',
                       style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white,
+                          color: Colors.lightGreen,
                           fontWeight: FontWeight.bold),
                     )
                   ]),
@@ -149,12 +235,56 @@ class _MyHomePageState extends State<MyHomePage> {
                         border: OutlineInputBorder(),
                         labelText: 'Enter PC Price'),
                     keyboardType: TextInputType.number,
-                  ),),
+                  ),
+                ),
+                Row(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "6",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 6')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "10",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 10')),
+                    SizedBox(width: 4),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PCPage(
+                                PC: _PC.text,
+                                PC_Installment: "24",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('Installment 24'))
+                  ],
+                )
+              ],
             ),
-              ),
+          ],
         ),
       ),
-    ),
+      backgroundColor: Colors.lightGreen.shade100,
     );
   }
 }
